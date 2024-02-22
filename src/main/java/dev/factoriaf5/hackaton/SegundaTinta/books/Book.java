@@ -16,8 +16,8 @@ public class Book {
 
     private Long id;
     private String title;
-  
     private String author;
+    private String genre;
     private String description;
 
 
@@ -45,4 +45,12 @@ public String getDescription() {
 public void setDescription(String description) {
     this.description = description;
 }
+
+public String getGenre() {
+    return genre;
+}
+public void setGenre(String genre) {
+    this.genre = genre;
+}
+
 }
