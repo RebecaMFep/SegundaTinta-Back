@@ -1,7 +1,6 @@
 package dev.factoriaf5.hackaton.SegundaTinta.books;
 
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,19 +8,20 @@ import java.util.List;
 
 @Service
 public class BookService {
-    private final BookRepository bookRepository;
+
+    private final BookRepository repository;
 
     @Autowired
-    public BookService(BookRepository bookRepository) {
-        this.bookRepository = bookRepository;
+    public BookService(BookRepository repository) {
+        this.repository = repository;
     }
 
     public List<Book> getAllBooks() {
-        return bookRepository.findAll();
+        return repository.findAll();
     }
 
     public Book getBookById(Long id) {
-        return bookRepository.findById(id).orElse(null);
+        return repository.findById(id).orElse(null);
     }
 }
 

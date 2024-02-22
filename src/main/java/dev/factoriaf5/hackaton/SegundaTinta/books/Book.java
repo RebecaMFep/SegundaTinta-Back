@@ -5,20 +5,34 @@ import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Column;
+import jakarta.persistence.Table;
+
 
 @Entity
+@Table(name = "announcements")
 
 public class Book {
+    
     @Id
-
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_book")
 
     private Long id;
+
+    @Column
     private String title;
+
+    @Column
     private String author;
+
+    @Column
     private String genre;
+
+    @Column
     private String description;
+
+    public Book() {
+    }
 
 
 public Long getId() {
